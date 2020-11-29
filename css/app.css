@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 50px 330px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+}
+
+.section__container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #F3EFEA;
+}
+
+.section__container-main-info {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section__container-main-info-country {
+    color: #515151;
+    margin-bottom: 5px;
+}
+
+.section__container-main-info-country__span {
+    display: none;
+}
+
+.section__container-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section__container-info__link {
+    border: 1px solid #D4D4D4;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+    color: #515151;
+    margin-left: 5px;
+}
+
+.section__container_flex {
+    min-width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section__container_flex__container {
+    padding: 25px 20px;
+    background-color: #F9F7F2;
+    margin-bottom: 30px;
+}
+
+.section__container_flex__container__span {
+    font-weight: bold;
+}
+
+.section__container_flex__container-comment {
+    margin-top: 20px;
+}
+
+.section__container_flex__container-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__container_flex__span {
+    font-weight: bold;
+}
+
+.section__container_flex__span__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    background-color: #FF4641;
+    border: 1px solid #FF4641;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.section__container_flex__span__link:hover {
+    background-color: white;
+    color: #FF4641;
+}
+
+.currency__img {
+    width: 12px;
+}
+
+.stars__container {
+    display: inline-block;
+}
+
+.img-star-gray {
+    margin-bottom: -3px;
+}
+
+.text-star-gray {
+    display: inline-block;
+    color: #959595;
+    margin-left: 5px;
+}
+
+.header__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__form__container-cityes {
+    border: 1px solid #F3EFEA;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header__form__container-cityes_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #F3EFEA;
+    cursor: pointer;
+}
+
+.header__form__container_font-weight {
+    font-weight: bold;
+}
+
+.header__form__container-cityes-inputs {
+    padding: 20px;
+}
+
+.header__form__container-cityes-inputs_padding-right {
+    padding-right: 35px;
+}
+
+.header__form__container-cityes-inputs__input {
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid #D5CDBE;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.header__form__container-cityes-inputs_position {
+    position: relative;
+}
+
+.header__form__container-cityes-inputs_position__container {
+    width: 100%;
+    position: absolute;
+    padding: 5px 30px;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 5px 10px 0 rgb(201, 201, 201);
+    display: none;
+}
+
+.header__form__container-cityes-inputs_position__container-active {
+    display: block;
+}
+
+.header__form__container-cityes-inputs_position__container__text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.header__form__container-cityes-inputs_position__container__text:hover {
+    text-decoration: underline;
+}
+
+.header__form__container-cityes-inputs__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.header__form__container-cityes-inputs__label::before {
+    content: ' ';
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: white;
+    color: white;
+    border: 1px solid #D5CDBE;
+}
+
+.header__form__container-cityes-inputs__label-active::before {
+    background-color: #FF4641;
+    border: 1px solid #FF4641;
+    content: '\2714';
+}
+
+.header__form__container-cityes-inputs-checkbox {
+    display: none;
+}
+
+.header__form__container-cityes-inputs_padding-bottom {
+    padding-bottom: 0;
+}
+
+.header__form__container-cityes-inputs_flex {
+    display: flex;
+}
+
+.header__form__container-cityes-inputs-radio__label {
+    padding: 15px;
+    border-radius: 50px;
+    background-color: #F9F7F2;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header__form__container-cityes-inputs-radio__label-active {
+    background-color: #FDE283;
+}
+
+.header__form__container-cityes-inputs-radio {
+    display: none;
+}
+
+.reset__label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset {
+    display: none;
+}
+
+.reset__img {
+    margin-right: 10px;
+}
+
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+    background-color: #212121;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.noUi-base, .noUi-connects {
+    height: 5px;
+}
+
+.noUi-connect {
+    background-color: #FF4641;
+}
+
+.noUi-target {
+    height: 5px;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -8px;
+    background-color: white;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border: 5px solid #FF4641;
+    cursor: grab;
+}
+
+.noUi-horizontal .noUi-handle:active {
+    cursor: grabbing;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
+
+.slideToggleAnim {
+    transition: all 0.3s;
+}
+
+.slideToggle {
+    height: 0;
+    overflow: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.header__form__container-cityes_flex-arrow {
+    transition: all 0.3s;
+}
+
+.slideToggleArrow {
+    transform: rotateX(180deg);
+}
+
+.search {
+    justify-content: center;
+    align-items: center;  
+    display: none;
+}
+
+.search__text {
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    color: #959595;
+    font-style: italic;
+}
+
+.search_flex {
+    display: flex;
+}
+
+.section__container-none {
+    display: none;
+}
+
+.slider-values {
+    display: none;
+}
