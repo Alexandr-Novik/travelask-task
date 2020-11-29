@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/nouislider.min.css">
+    <link rel="stylesheet" href="./css/app.min.css">
+    <title>Task</title>
+</head>
+
+<body id="body">
+    <section class="section">
+        <header>
+            <form class="header__form" action="">
+                <div class="header__form__container-cityes">
+                    <div class="header__form__container-cityes_flex" onclick="slideToggle(this)">
+                        <p class="header__form__container_font-weight">Поиск по странам и городам</p>
+                        <img class="header__form__container-cityes_flex-arrow" src="./imgs/arrow.png" alt="arrow">
+                    </div>
+                    <div class="slideToggleAnim header__form__container-cityes-inputs">
+                        <div class="header__form__container-cityes-inputs_position">
+                            <input class="header__form__container-cityes-inputs__input" id="country" type="text"
+                                autocomplete="off" placeholder="Введите страну, например, Россия">
+                            <div class="header__form__container-cityes-inputs_position__container" id="countryes">
+                                <p class="header__form__container-cityes-inputs_position__container__text"
+                                onclick="getCountryItem(this)">Греция</p>
+                                <p class="header__form__container-cityes-inputs_position__container__text"
+                                onclick="getCountryItem(this)">Россия</p>
+                                <p class="header__form__container-cityes-inputs_position__container__text"
+                                onclick="getCountryItem(this)">Франция</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__form__container-cityes">
+                    <div class="header__form__container-cityes_flex" onclick="slideToggle(this)">
+                        <p class="header__form__container_font-weight">Звёзды</p>
+                        <img class="header__form__container-cityes_flex-arrow" src="./imgs/arrow.png" alt="arrow">
+                    </div>
+                    <div
+                        class="slideToggleAnim header__form__container-cityes-inputs header__form__container-cityes-inputs_padding-bottom">
+                        <div>
+                            <label class="header__form__container-cityes-inputs__label" for="no-stars">
+                                <input class="header__form__container-cityes-inputs-checkbox" id="no-stars"
+                                    type="checkbox" value="0" onclick="funcCheckboxActive(this)">Без звёзд
+                            </label>
+                        </div>
+                        <div>
+                            <label class="header__form__container-cityes-inputs__label" for="one-star">
+                                <input class="header__form__container-cityes-inputs-checkbox" id="one-star"
+                                    type="checkbox" value="1" onclick="funcCheckboxActive(this)">1 звезда
+                            </label>
+                        </div>
+                        <div>
+                            <label class="header__form__container-cityes-inputs__label" for="two-stars">
+                                <input class="header__form__container-cityes-inputs-checkbox" id="two-stars"
+                                    type="checkbox" value="2" onclick="funcCheckboxActive(this)">2 звезды
+                            </label>
+                        </div>
+                        <div>
+                            <label class="header__form__container-cityes-inputs__label" for="three-stars">
+                                <input class="header__form__container-cityes-inputs-checkbox" id="three-stars"
+                                    type="checkbox" value="3" onclick="funcCheckboxActive(this)">3 звезды
+                            </label>
+                        </div>
+                        <div>
+                            <label class="header__form__container-cityes-inputs__label" for="four-stars">
+                                <input class="header__form__container-cityes-inputs-checkbox" id="four-stars"
+                                    type="checkbox" value="4" onclick="funcCheckboxActive(this)">4 звезды
+                            </label>
+                        </div>
+                        <div>
+                            <label class="header__form__container-cityes-inputs__label" for="five-stars">
+                                <input class="header__form__container-cityes-inputs-checkbox" id="five-stars"
+                                    type="checkbox" value="5" onclick="funcCheckboxActive(this)">5 звёзд
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__form__container-cityes">
+                    <div class="header__form__container-cityes_flex" onclick="slideToggle(this)">
+                        <p class="header__form__container_font-weight">Тип</p>
+                        <img class="header__form__container-cityes_flex-arrow" src="./imgs/arrow.png" alt="arrow">
+                    </div>
+                    <div class="slideToggleAnim header__form__container-cityes-inputs header__form__container-cityes-inputs_flex">
+                        <label class="header__form__container-cityes-inputs-radio__label" for="hotel">
+                            <input class="header__form__container-cityes-inputs-radio" name="radio-house" id="hotel" value="Отель" type="radio" onclick="funcRadioActive(this)">Отели
+                        </label>
+                        <label class="header__form__container-cityes-inputs-radio__label" for="apartments">
+                            <input class="header__form__container-cityes-inputs-radio" name="radio-house" id="apartments" value="Апартаменты" type="radio" onclick="funcRadioActive(this)">Апартаменты
+                        </label>
+                    </div>
+                </div>
+                <div class="header__form__container-cityes">
+                    <div class="header__form__container-cityes_flex" onclick="slideToggle(this)">
+                        <p class="header__form__container_font-weight">Цена</p>
+                        <img class="header__form__container-cityes_flex-arrow" src="./imgs/arrow.png" alt="arrow">
+                    </div>
+                    <div class="slideToggleAnim header__form__container-cityes-inputs header__form__container-cityes-inputs_padding-right">
+                        <div id="range-slider"></div>
+                        <div class="slider-values" id="slider-snap-value-lower"></div>
+                        <div class="slider-values" id="slider-snap-value-upper"></div>
+                    </div>
+                </div>
+                <label class="reset__label" for="reset">
+                    <input class="reset" type="reset" id="reset"><img class="reset__img" src="./imgs/reset.png" alt="reset">Сбросить все фильтры
+                </label>
+            </form>
+        </header>
+        <div id="mainContainer">
+            <div class="search">
+                <p class="search__text">"Поиск не дал результатов"</p>
+            </div>
+            <div id="posts">
+                <!--posts-->
+            </div>
+        </div>
+    </section>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/nouislider.min.js"></script>
+    <script src="./js/app_build.js"></script>
+</body>
+
+</html>

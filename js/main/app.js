@@ -458,7 +458,7 @@ function timeoutMoney() {
     }
 }
 
-setInterval(timeoutMoney, 2000);
+//setInterval(timeoutMoney, 2000);
 
 function start(bool) {
     if (bool === true) {
